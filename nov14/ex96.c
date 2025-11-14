@@ -28,5 +28,13 @@ int main()
     // "it's a cute little shortcut"
     printf("%s is %d years old\n", p->name, p->age);
 
+    p-> age = 20;
+    printf("%s will soon be %d years old", p-> name, p->age);
+
+    printf("enter a new name and age: ");
+    scanf("%s", p->name);
+    scanf("%d", &p->age);
+    printf("%s will at some point be %d years old\n", p->name, p->age);
+
     return 0;
 }
