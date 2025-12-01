@@ -30,4 +30,15 @@ void func(int n) {
     if (n > 10) return;
     printf("hello %d\n", n);
     func(n + 1); // modified parameter at the call
+
+    // if we do this:
+    printf("bye %d\n", n);
+    // itll start decrementing because of the fundamentals:
+    // the func(n + 1) creates a stack thats a FIFO
+    // so when each gets released, the rest of the PREVIOUS copy of func continues -
+    // so when 10 gets released, the rest of the 9th func goes on, then the rest of the 8th, the 7th, etc.
+    
+
+    // malloc gets stored in the heap (dynamic memory)
+    // functions in C are saved on the stack
 }
